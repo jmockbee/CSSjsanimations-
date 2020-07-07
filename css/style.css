@@ -1,0 +1,74 @@
+/*
+ * global site styles
+ */
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+hp-content {
+	display: flex;
+	background-color: #f00;
+
+	width: 100vw;
+	height: 100vh;
+
+	justify-content: center;
+	align-items: center;
+}
+
+hp-presentation > hp-slide {
+	display: none;
+}
+
+hp-presentation > hp-slide.active {
+	display: inline-block;
+}
+
+hp-presentation {
+	display: block;
+	background-color: #fff;
+
+	width: 80vmin;
+	height: 80vmin;
+
+	border: .2em solid #000;
+	border-radius: 1em;
+}
+
+hp-slide {
+	display: inline-block;
+	background-color: #fff;
+	font-size: 7vmin;
+	font-family: sans-serif;
+	text-align: center;
+
+	width: 80%;
+	height: 80%;
+
+	margin: 10%;
+}
+
+hp-chooser {
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+}
+
+/* * is wild card selector to say any element within */
+hp-chooser * {
+	max-width: 20%;
+	margin: 5% 2.5%;
+}
+
+hp-chooser.chosen > *.chosen {
+	max-width: 30%;
+}
+
+hp-chooser.chosen > *:not(.chosen) {
+	max-width: 16.6%;
+}
